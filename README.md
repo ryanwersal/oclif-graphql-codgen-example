@@ -1,32 +1,22 @@
-oclif-graphql-codegen-example
-=============================
+# oclif-graphql-codegen-example
 
 CLI for viewing country data as minimal example of oclif graphql-codegen
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-graphql-codegen-example.svg)](https://npmjs.org/package/oclif-graphql-codegen-example)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-graphql-codegen-example.svg)](https://npmjs.org/package/oclif-graphql-codegen-example)
-[![License](https://img.shields.io/npm/l/oclif-graphql-codegen-example.svg)](https://github.com/ryanwersal/oclif-graphql-codegen-example/blob/master/package.json)
+Also doubles as testbed for further changes/enhancements to
+[`@graphql-codegen/typescript-oclif`](https://www.npmjs.com/package/@graphql-codegen/typescript-oclif).
 
-<!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
-# Usage
-<!-- usage -->
-```sh-session
-$ npm install -g oclif-graphql-codegen-example
-$ countries COMMAND
-running command...
-$ countries (-v|--version|version)
-oclif-graphql-codegen-example/0.0.1 darwin-x64 node-v13.12.0
-$ countries --help [COMMAND]
-USAGE
-  $ countries COMMAND
-...
+## Getting Started
+
+This project uses [`yarn`](https://yarnpkg.com/) for package management in alignment with the [`graphql-code-generator`](https://github.com/dotansimha/graphql-code-generator) project.
+
+To initialize:
+
+```bash
+yarn
 ```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
 
-<!-- commandsstop -->
+The project also includes a `Makefile` to make it easier to encode certain required workarounds. To generate the oclif commands from the `*.graphql` documents invoke the `generate` target:
+
+```bash
+make generate
+```
