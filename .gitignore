@@ -5,7 +5,7 @@
 /dist
 /lib
 /tmp
-/yarn.lock
+/package-lock.json
 node_modules
 
 # graphql-codgen generated
