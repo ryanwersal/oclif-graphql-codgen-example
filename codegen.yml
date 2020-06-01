@@ -11,4 +11,7 @@ generates:
       baseTypesPath: ../types.ts
     plugins:
       - typescript-oclif:
-          handlerPath: ../../handler
+          handlerPath: ../utils/handler
+hooks:
+  afterAllFileWrite:
+    - prettier --write

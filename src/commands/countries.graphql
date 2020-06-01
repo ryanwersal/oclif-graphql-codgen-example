@@ -1,4 +1,4 @@
-query Countries($code: String) {
+query Countries($code: String) @oclif(description: "List countries") {
   countries(filter: { code: { eq: $code } }) {
     code
     name
