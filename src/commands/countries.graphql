@@ -1,0 +1,11 @@
+query Countries($code: String) {
+  countries(filter: { code: { eq: $code } }) {
+    code
+    name
+    continent {
+      code
+      name
+    }
+    currency
+  }
+}

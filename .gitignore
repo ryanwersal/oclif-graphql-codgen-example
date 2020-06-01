@@ -1,0 +1,13 @@
+# oclif
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+/tmp
+/yarn.lock
+node_modules
+
+# graphql-codgen generated
+src/types.ts
+src/commands/**/*.ts

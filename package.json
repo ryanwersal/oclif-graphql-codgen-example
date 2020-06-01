@@ -1,0 +1,55 @@
+{
+  "name": "oclif-graphql-codegen-example",
+  "description": "CLI for viewing country data as minimal example of oclif graphql-codegen",
+  "version": "0.0.1",
+  "author": "Ryan Wersal @ryanwersal",
+  "bin": {
+    "countries": "./bin/run"
+  },
+  "bugs": "https://github.com/ryanwersal/oclif-graphql-codegen-example/issues",
+  "dependencies": {
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^3.0.1",
+    "graphql": "^15.0.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.15.0",
+    "@graphql-codegen/near-operation-file-preset": "^1.15.0",
+    "@graphql-codegen/typescript": "1.15.0",
+    "@graphql-codegen/typescript-oclif": "^1.15.0",
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/node": "^14.0.6",
+    "eslint": "^7.1.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/ryanwersal/oclif-graphql-codegen-example",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "countries"
+  },
+  "repository": "ryanwersal/oclif-graphql-codegen-example",
+  "scripts": {
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "generate": "graphql-codegen --config codegen.yml"
+  },
+  "types": "lib/index.d.ts"
+}
